@@ -1,0 +1,77 @@
+
+
+.footer{
+    /* width: 100%; */
+    /* height: 100vh; */
+    /* background: #943ec0; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+.box{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+.box ul{
+    display: flex;
+    margin: 0px 10px;
+}
+.box ul li{
+    list-style: none;
+    margin: 0px 5px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 100px;
+    text-align: center;
+
+}
+.box ul li a{
+    font-size: 25px;
+    text-decoration: none;
+    color: #000;
+    display: block;
+    border-radius: 100px;
+    transition: 0.2s;
+}
+.box ul li .active_page{
+    background-color: #a05acb;
+    color: #fff;
+}
+.box ul li a:hover,
+.box button a:hover{
+    background-color: #a05acb;
+    color: #fff;
+}
+
+/* ---------- Buttons ---------- */
+.box button{
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #ffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 100px;
+    overflow: hidden;
+}
+.box button a{
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    color: #000;
+    transition: 0.2s;
+}
+/*  -------------------offset dropdown  ---------- */
+.dropdown-container{
+    /* background-color: #a05acb; */
+    font-size: 25px;
+}
+
+.offset-dropdown{
+    width: 20px;
+}
+select{
+    font-size: 20px;
+}
