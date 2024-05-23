@@ -36,10 +36,13 @@
     border-radius: 100px;
     transition: 0.2s;
 }
+
 .box ul li .active_page{
     background-color: #a05acb;
     color: #fff;
 }
+
+
 .box ul li a:hover,
 .box button a:hover{
     background-color: #a05acb;
@@ -75,3 +78,4 @@
 select{
     font-size: 20px;
 }
+

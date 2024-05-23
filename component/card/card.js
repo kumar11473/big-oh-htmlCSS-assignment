@@ -1,5 +1,5 @@
 const showCards = async (cardData) => {
-    console.log("called showcards");
+    // console.log("called showcards");
     console.log(cardData);
     
     const cardContainer = document.querySelector(".card-container");
@@ -32,6 +32,7 @@ const showCards = async (cardData) => {
                     </div>
                 </div>
             `;
+            // cardContainer=""
             cardContainer.appendChild(cards);
 
             const favIcon = cards.querySelector(".add-to-fav-icon");
