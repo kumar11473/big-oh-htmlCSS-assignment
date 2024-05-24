@@ -1,8 +1,19 @@
+---------------to read-----------------
+1. difference between document object vs window object
+2.  difference addQuerySelector vs addQuerySelectorAll 
+3. getElementById vs queryselector
+
+
+
+--------------------------doubt--------------------------------
 1. offset change krne par kya pura website refresh krna hai ya already data me nya data ko add kr dena hai??
 
 
------------------issues----------------
 
+
+
+
+-----------------issues----------------
 
 1. jab search query k sath api call kr rhe ho tab rerenderFooter call krna pad rha hai
     or rerenderFooter loadContent(page_number =1 ) ko call krta h jisse page me searched content na aake getData method call ho ja rha hai 
