@@ -19,7 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
     showCards(data.products);
   }
 
-  // Add an onclick listener to the search button
   searchButton.addEventListener("click", () => {
     let searchValue = searchInput.value;
     if (searchValue.length === 0 || searchValue == null) {
@@ -31,20 +30,14 @@ document.addEventListener("DOMContentLoaded", () => {
       loadQueryContent(searchValue);
     }
 
-    // Perform the search action here
-    
+  
 
-    // showData(data);
   });
 
-  // Optional: Add 'Enter' key listener for the search input
+  
   searchInput.addEventListener('keypress', (e) => {
-    // console.log("enter pressed")
       if (e.key === 'Enter') {
           const searchValue = searchInput.value;
-          // console.log('Search Value:', searchValue);
-
-       
           loadQueryContent(searchValue);
       }
   });

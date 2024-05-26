@@ -4,8 +4,7 @@
     background-color: antiquewhite;
     padding: 10px 10px;
     align-items: center;
-    /* height: 50vh */
-    /* flex: 1; */
+ 
 }
 .card-container{
     display: grid;
@@ -15,24 +14,3 @@
     justify-content: space-around;
 
 }
-
-/* @media screen and (max-width:700){
-    
-    .card-container{
-        display: grid;
-        margin: 10px;
-     
-        grid-template-columns: 3fr 3fr 3fr
-    }
-}
-
-
-@media screen and (max-width:500){
-    
-    .card-container{
-        display: grid;
-        margin: 10px;
-       
-        grid-template-columns: 1fr 1fr 
-    }
-} */
