@@ -25,9 +25,14 @@ document.addEventListener("DOMContentLoaded", () => {
     if (searchValue.length === 0 || searchValue == null) {
       alert("Enter valid input ");
     }
+    else{
+      const footer = document.querySelector('.footer')
+      footer.style.display='none'
+      loadQueryContent(searchValue);
+    }
 
     // Perform the search action here
-    loadQueryContent(searchValue);
+    
 
     // showData(data);
   });
@@ -43,6 +48,9 @@ document.addEventListener("DOMContentLoaded", () => {
           loadQueryContent(searchValue);
       }
   });
+
+
+
 });
 
 
