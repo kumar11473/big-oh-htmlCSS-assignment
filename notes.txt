@@ -2,7 +2,7 @@
 1. difference between document object vs window object
 2.  difference addQuerySelector vs addQuerySelectorAll 
 3. getElementById vs queryselector
-
+4. why cart.html need to put in root directory
 
 
 --------------------------doubt--------------------------------

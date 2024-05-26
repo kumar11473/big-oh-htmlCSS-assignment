@@ -11,14 +11,12 @@ const loadContent = async(pageNumber)=> {
     const data = await apiInstance.getData(pageNumber);
     
     showCards(data.products);
-    // console.log(apiInstance.total_number_of_response) //works fine
-    // skip += limit;
 
   } catch (error) {
     console.error("Error loading more content:", error);
   } finally {
     loading = false;
-    // loadingDiv.style.display = 'none';
+    
   }
 }
 
@@ -45,6 +43,12 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     
    
+      const favIcon = document.querySelector("#favoriteIcon");
+    if (favIcon) {
+        favIcon.addEventListener("click", () => {
+        window.location.href = "http://127.0.0.1:5500/cart.html";
+        });
+    }
    
   });
 
