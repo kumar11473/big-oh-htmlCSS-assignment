@@ -49,6 +49,12 @@ document.addEventListener("DOMContentLoaded", () => {
       }
   });
 
+  searchInput.addEventListener('input',()=>{
+    console.log("search input change")
+    if(searchInput.value.length==0){
+      window.location.href='index.html'
+    }
+  })
 
 
 });
