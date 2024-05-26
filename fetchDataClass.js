@@ -21,7 +21,7 @@ class FetchData {
     params.limit = parseInt(this.offset); // offset ka mtlb ek page me kitna data chaghiye
 
     const queryString = new URLSearchParams(params).toString();
-    // console.log("inside get data method")
+   
     /*
         ager mai page number of cache karu or offset different ho to data kam jyada aane lagenge
         isliye pure k pure url ko hi ho cache kr do
@@ -43,10 +43,7 @@ class FetchData {
       const data = await response.json();
 
       this.cache[url] = data;
-      // console.log('above return ')
-
-      // use this variable to calculate total number of pages we will render in pagination
-    
+     
       this.total_number_of_fetched_data = data.total;
       return data;
     } catch (error) {
@@ -92,9 +89,6 @@ class FetchData {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
         const data = await response.json();
-
-        // use this variable to calculate total number of pages we will render in pagination
-        // this.total_number_of_fetched_data=data.total
         return data;
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -118,64 +112,5 @@ class FetchData {
 
 const apiInstance = new FetchData();
 
-// const para={
-//     limit:10,
-//     skip:10
-// }
 
-// async function fetchData (){
-//     try {
-//         const data = await apiInstance.getData(para);
-//         console.log(data);
-//     } catch (error) {
-
-//     }
-// }
-
-// fetchData()
-// console.log("inside fetch data class")
 export default apiInstance;
-
-// export default FetchData;
-
-// class CustomSearch extends HTMLElement {
-//     constructor() {
-//         super();
-//         this.attachShadow({ mode: 'open' });
-//         this.shadowRoot.innerHTML = `
-//             <div class="search-bar">
-//                 <input type="text" id="searchInput" placeholder="Search...">
-//                 <button id="searchButton">Search</button>
-//                 <select id="sortDropdown">
-//                     <option value="asc">Ascending</option>
-//                     <option value="desc">Descending</option>
-//                 </select>
-//                 <span id="favoriteIcon">❤️</span>
-//             </div>
-//         `;
-//     }
-
-//     connectedCallback() {
-//         this.shadowRoot.getElementById('searchButton').addEventListener('click', () => this.search());
-//         this.shadowRoot.getElementById('sortDropdown').addEventListener('change', () => this.sort());
-//         this.shadowRoot.getElementById('favoriteIcon').addEventListener('click', () => this.navigateToFavorites());
-//     }
-
-//     search() {
-//         const query = this.shadowRoot.getElementById('searchInput').value;
-//         console.log(`Searching for: ${query}`);
-//         // Implement your search functionality here
-//     }
-
-//     sort() {
-//         const sortOrder = this.shadowRoot.getElementById('sortDropdown').value;
-//         console.log(`Sorting order: ${sortOrder}`);
-//         // Implement your sorting functionality here
-//     }
-
-//     navigateToFavorites() {
-//         window.location.href = 'favorites.html';
-//     }
-// }
-
-// customElements.define('custom-search', CustomSearch);

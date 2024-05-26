@@ -23,6 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
       loadContent(current_page);
     }
 
+    // prev.style.display = current_page <= 1 ? "none" : "block";
+
   })
 
             // next button of footer
@@ -42,10 +44,9 @@ document.addEventListener("DOMContentLoaded", () => {
       cardContainer.innerHTML = "";
       apiInstance.current_page_number = current_page;
       loadContent(current_page);
-
-
     }
 
+    // next.style.display = current_page >= total_pages ? "none" : "block";
   })
 
 
@@ -89,7 +90,7 @@ function renderFooter() {
     }
 
     // Add event listeners to page numbers
-    // const pageNumbers = document.querySelector('.page_number'); // give erro
+    // const pageNumbers = document.querySelector('.page_number'); // give error
     const pageNumbers = document.querySelectorAll(".page_number");
 
     pageNumbers.forEach((pageNumber) => {
@@ -105,32 +106,7 @@ function renderFooter() {
     });
   }
 
-  //  const prev = document.querySelector(".prev");
-  //     const next = document.querySelector(".next");
-
-  //     // prev.onclick = function () {
-  //     //     if (current_page > 1) {
-  //     //         // createPages(current_page);
-  //     //         const cardContainer = document.querySelector(".card-container");
-  //     //         cardContainer.innerHTML=""
-  //     //         console.log("current_page")
-  //     //         loadContent(current_page); // Load content for the previous page
-  //     //         current_page--;
-  //     //     }
-  //     // }
-  //     // prev.style.display = current_page <= 1 ? "none" : "block";
-
-  //     next.addEventListener('click',(e)=>{
-  //         e.preventDefault();
-  //         // console.log(current_page+"  "+ total_page)
-  //         if (current_page < total_page) {
-  //             current_page++;
-  //             const cardContainer = document.querySelector(".card-container");
-  //             cardContainer.innerHTML=""
-  //             loadContent(current_page); // Load content for the next page
-  //         }
-  //     })
-  //     next.style.display = current_page >= total_page ? "none" : "block";
+  
 }
 
 export default renderFooter;

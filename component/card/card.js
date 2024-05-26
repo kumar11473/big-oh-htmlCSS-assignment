@@ -12,12 +12,10 @@ const showCards = async (cardData) => {
       const cards = document.createElement("div");
       cards.classList.add("card");
 
-      // Check if the item is already in the favorites list
-      // const status = window.localStorage.getItem(data.id);
+      // Checking if the item is already in the favorites list
 
       const status = favItemIds.includes(data.id);
-      
-      // const status =false;
+    
       // initial value set kro
 
       const favIconClass = status === false ? "fa-regular fa-heart" : "fa-solid fa-heart";
@@ -63,7 +61,7 @@ const showCards = async (cardData) => {
         } else {
           favItemIds = favItemIds.filter((ids) => ids !== data.id);
           console.log(data.id, "removed from fav");
-          // window.localStorage.removeItem(data.id);
+          
           window.localStorage.setItem("fav", JSON.stringify(favItemIds));
           icon.className = "fa-regular fa-heart";
           icon.style.color = "";

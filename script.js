@@ -2,7 +2,7 @@ import apiInstance from "./fetchDataClass.js";
 import showCards from "./component/card/card.js";
 import renderFooter from "./component/footer/footer.js";
 
-// let loadContent=null // declaring loadContent because loadcontent() is declared inside eventListnner and we want to export it.
+
 let loading = false;
 const loadContent = async(pageNumber)=> {
   loading = true;
@@ -21,9 +21,7 @@ const loadContent = async(pageNumber)=> {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    // console.log("DOM ContentLoaddedd for script")
-    //   let offset = 10;
-  
+   
       const offset = document.querySelector('.offset-dropdown')
       
      
